@@ -1,38 +1,58 @@
+ul, li {
+  list-style: none;
+}
+
+
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#hamburger-menu {
+  position: fixed;
+  top: 100px;
+  left: -300px; /* 메뉴를 왼쪽에서 숨김 */
+  width: 300px;
+  height: 100%;
+  background-color: #e0e0e0;
+  transition: left 0.3s ease; /* 애니메이션 설정 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hamburger-menu.open {
+  left: 0; /* 햄버거 메뉴를 눌렀을 때 나타남 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subGnb {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  margin-top: 10px;
+  color: rgb(27, 27, 27);
 }
 
-.App-link {
-  color: #61dafb;
+.subGnb li {
+  margin-top: 20px;
+  color: rgb(27, 27, 27);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* DefaultData */
+.DefaultData_Container {
+  display: flex; 
+  justify-content: space-evenly;
+}
+.DefaultData_Box {
+  width: 20%;
+  height: 120px;
+  border-radius: 5px;
+}
+.DefaultData_Box.blue{
+background-color: #6200ea;
+}
+.DefaultData_Box.yellow{
+background-color: #ffc107;
+}
+.DefaultData_Box.perple{
+background-color: #9c27b0;
+}
+.DefaultData_Box.green{
+background-color: #26a69a;
 }

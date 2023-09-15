@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {Router, Route, Routes} from 'react-router-dom'
 import './App.css';
+import './reset.css'
+import Nav from './Layout/LayoutNav';
+import Header from './Layout/LayoutHeader';
+import Body from './Layout/LayoutBody'
 
 function App() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(prevState => !prevState);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header toggleNav={toggleNav} />
+      {isNavOpen && <Nav isOpen={isNavOpen} />}
+      <Body isNavOpen={isNavOpen}/>
     </div>
   );
 }
