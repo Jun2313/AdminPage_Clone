@@ -14,7 +14,7 @@ function Header({ toggleNav }){
         <Button onClick={toggleNav}>Menu</Button>
       </Navbar.Brand>
       <Nav className="me-auto">
-        <Nav.Link href="/home" style={{
+        <Nav.Link href="/" style={{
           color: 'white', 
           fontWeight: 'bold'
           }}>MATERIAL ADMIN PRO
@@ -22,7 +22,7 @@ function Header({ toggleNav }){
         </Nav>
       </div>
       <div style={{display: 'flex'}}>
-        <Nav.Link href="/home" style={{
+        <Nav.Link href="/" style={{
           color: 'white', 
           fontWeight: 'bold'
           }}>Oerview
@@ -33,7 +33,7 @@ function Header({ toggleNav }){
           fontWeight: 'bold'
           }}>Document
         </Nav.Link>
-        
+
       </div>
     </Container>
     </Navbar>

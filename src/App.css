@@ -38,11 +38,40 @@ ul, li {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden;
   text-align: center;
 }
-#hamburger-menu {
+
+.LayoutHeader {
+  position: fixed;
+  top: 0;
+  height: 100px;
+}
+
+.LayoutNav {
   position: fixed;
   top: 100px;
+  /* height: calc(100vh - 100px); */
+  width: 300px;
+  overflow-y: auto;
+}
+
+.LayoutBody {
+  margin-top: 100px; 
+  overflow-y: auto; 
+  height: calc(100vh - 100px); 
+
+}
+
+
+#hamburger-menu {
+  overflow-y: auto;
+  position: fixed;
+  /* top: 100px; */
+  /* margin-top: 100px; */
   left: -300px; /* 메뉴를 왼쪽에서 숨김 */
   width: 300px;
   height: 100%;
@@ -66,6 +95,39 @@ ul, li {
   margin-top: 20px;
   color: rgb(27, 27, 27);
 }
+/* Main */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.display-6 {
+  line-height: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+}
+
+.small, .toast, .card, .alert {
+  letter-spacing: 0.0178571429em;
+  font-size: 0.875rem;
+}
+
+.mb-5 {
+  margin-bottom: 2.5rem !important;
+}
+
+@media (min-width: 992px){
+  
+
+.col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+}
+
 
 
 /* DefaultData */

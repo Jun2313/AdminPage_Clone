@@ -5,15 +5,19 @@ function Nav({isOpen}) {
   
   return (
     <>
-
-    <div>
+    <div style={{ overflowY: 'hidden' }}>
       <div id="hamburger-menu" className={isOpen ? 'open' : ''}>
         <ul className='gnb'>
-          <li><h4>Interface</h4>
+          <li style={{marginTop:'30px', textAlign: 'left', marginLeft: '20px'}}>
+            <h4>Interface</h4>
+          <li style={{marginTop: '30px', textAlign:'center'}}>
+            <Link to="/">Overview</Link>
+          </li>
           <li style={{
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            marginTop: '30px'
           }}>Dashboards
             <ul className='subGnb'>
             <li><Link to="/default">Default</Link></li>

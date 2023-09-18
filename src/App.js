@@ -15,9 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header toggleNav={toggleNav} />
-      {isNavOpen && <Nav isOpen={isNavOpen} />}
-      <Body isNavOpen={isNavOpen}/>
+      <Header className="LayoutHeader" toggleNav={toggleNav} />
+      {isNavOpen && <Nav className="LayoutNav" isOpen={isNavOpen} />}
+      <Body className="LayoutBody" isNavOpen={isNavOpen}/>
     </div>
   );
 }
