@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 
 function Main (){
 
@@ -57,12 +58,16 @@ function Main (){
 
       <div className="row gx-5">
         <div className="col-sm-6 col-lg-4 mb-5">
+          <Link to="/default">
           <img class="img-fluid" src="https://assets.startbootstrap.com/img/screenshots-product-pages/material-admin-pro/dashboards/default.png" alt="..." />
           <div class="small font-monospace text-center">Default Dashboard</div>
+          </Link>
         </div>
         <div className="col-sm-6 col-lg-4 mb-5">
+          <Link to="/Minimal">
         <img class="img-fluid" src="https://assets.startbootstrap.com/img/screenshots-product-pages/material-admin-pro/dashboards/minimal.png" alt="..." />
         <div class="small font-monospace text-center">Default minimal</div>
+          </Link>
         </div>
         <div className="col-sm-6 col-lg-4 mb-5">
         <img class="img-fluid" src="https://assets.startbootstrap.com/img/screenshots-product-pages/material-admin-pro/dashboards/analytics.png" alt="..."/>

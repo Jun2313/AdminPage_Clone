@@ -131,37 +131,45 @@ ul, li {
 
 
 /* DefaultData */
-.DefaultData_Container {
+.DefaultData_Container, .MinimalData_Container {
   display: flex; 
   justify-content: space-evenly;
 }
-.DefaultData_Box {
+.DefaultData_Box, .MinimalData_Box {
   width: 20%;
   height: 120px;
   border-radius: 5px;
   padding: 1rem;
   box-sizing: border-box;
 }
-.DefaultData_BoxContainer {
+.DefaultData_BoxContainer, .MinimalData_BoxContainer {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.DefaultData_BoxContainer div {
+.DefaultData_BoxContainer div, .MinimalData_BoxContainer div {
   display: flex;
   flex-direction: column;
   align-Items: flex-start;
 }
-.DefaultData_BoxContainer div span:first-child {
+.DefaultData_BoxContainer div span:first-child,
+.MinimalData_BoxContainer div span:first-child {
   font-size: 20px;
   color: white;
   font-weight: bold;
 }
-.DefaultData_BoxContainer div span:last-child{
+.MinimalData_BoxContainer div span:first-child{
+  color: #333
+}
+.DefaultData_BoxContainer div span:last-child,
+.MinimalData_BoxContainer div span:last-child{
   color: #fff;
   font-weight: bold;
   font-size: 14px;
   opacity: 0.6;
+}
+.MinimalData_BoxContainer div span:last-child{
+  color: #333;
 }
 .DefaultData_Box.blue{
 background-color: #6200ea;
@@ -175,7 +183,8 @@ background-color: #9c27b0;
 .DefaultData_Box.green{
 background-color: #26a69a;
 }
-.DefaultData_text {
+.DefaultData_text, 
+.MinimalData_text {
   display: flex;
   padding-Left: 1rem;
   color: #aeaeae;
@@ -192,6 +201,9 @@ background-color: #26a69a;
 }
 .bg-white-50 {
   background-color: rgba(255, 255, 255, 0.5);
+}
+.bg-white-51 {
+  background-color: rgba(200, 200, 200, 0.5);
 }
 .text-primary {
   --bs-text-opacity: 1;
@@ -225,4 +237,36 @@ background-color: #26a69a;
   width: 45%;
   height: 220px;
   border: 1px solid black;
+}
+
+/* Minimal */
+
+.DefaultData_Box.blue {
+  border-left: 4px solid blue;
+}
+
+.DefaultData_Box.yellow {
+  border-left: 4px solid yellow;
+}
+
+.MinimalData_Box.perple {
+  border-left: 4px solid purple; 
+}
+
+.MinimalData_Box.green {
+  border-left: 4px solid green;
+}
+
+.MinimalData_Box {
+  position: relative;
+}
+
+.MinimalData_Box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: currentColor; 
 }
